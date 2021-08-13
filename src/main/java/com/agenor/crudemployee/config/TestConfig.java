@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
@@ -12,6 +14,7 @@ import com.agenor.crudemployee.repositories.EmployeeRepository;
 
 @Configuration
 @Profile("test")
+@EnableAutoConfiguration
 public class TestConfig implements CommandLineRunner{
 	
 	@Autowired
